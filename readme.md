@@ -195,6 +195,258 @@ GIT ->
 - git provides some tools to use their functionlity and fratures ex- github , gitlab etc...
 
 
+#git init
+#git add -A
+#git commit -m "first commit"
+#git branch -M main
+#git remote add origin https://github.com/neil-tech07/python--program.git
+#git push -u origin main
+
+
+TUPLE IN PYTHON :->
+
+- Tuple is a build in datatype that lets us create immutable (the value can't be changeble) sequence of values .
+- ex. tup = (87 , 67 , 98 , 34 , 45)
+- tup[0] -> 87
+- tup[1] -> 67
+- we can do the tuple as 
+1. tup1 = () -> empty tuple
+2. tup2 = (1,) -> a tuple
+3. tup3 = (34 , 67 , 89 , 20) -> tuple
+- tuple has also satisfy the slicing property.
+
+
+- tup.index(element) = returns index of first occurence 
+- tup.count(element) = returns the count total occurence 
+ 
+ex. tup = (2,1,3,1)
+tup.index(2) -> 3
+tup.count(1) -> 2
+
+
+DICTIONARY IN PYTHON :->
+
+- Dictionary are used to store the data values in key-values pair. 
+- They are unordered , mutable(changeble) & don't allow duplicate key .
+- ex -
+dict = {
+    "name" : "shradha"
+    "cgpa" = 9.8,
+    "marks" = [98 , 96, 95]
+}
+
+- the left part of the dictionary are the keys and right side part in their values so dictionary contains key:value pair structure. 
+
+
+NESTED DICTOIARY :->
+
+- Dictionary also satisfy the nested property.
+- dictoinary under dictoinary is called nested dictonary.
+- ex- 
+student : {
+    "name" : "Neil"
+    "score" : {
+    "chem" : 98,
+    "math" : 87,
+    "phy" : 79
+    }
+}
+
+
+DICTIONARY METHODS :->
+
+1. myDict.keys() = it returns all keys .
+2. myDict.values() = it returns all values .
+3. myDict.items() = it will return all key:value pair as tuple.
+4. myDict.get("key") = returns the key according to values .
+5. myDict.update(newDict) = insert the specified items to the dictionary.
+
+
+SET IN PYTHON :->
+
+- Set is the collection of the unordered items .
+- Each elements of the set must be unique & immutable (can't change).
+- ex -
+
+set1 = {1,2,3,4,5}
+set2 = {5,8,9,4}
+
+SET METHOD :->
+
+1. set1.add(element) - adds an element
+2. set1.remove(element) - remove an element
+3. set1.clear() - clear all the elements
+4. set1.pop() - Remove random values of set
+5. set1.union(set2) - combine both set values and returns a new set
+6. set1.intersection(set2) - combines the common values and returns a nnew set
+
+ex-
+
+set1 = {1,2,3,4,5}
+set2 = {4,5,6,7}
+set1.union(set2) -> {1,2,3,4,5,6,7}
+set1.intersecton(set2) - {4,5}
+
+
+LOOPS IN PYTHON :->
+
+- Loops are used to repeat instruction.
+- in python there are 2 loops -> 'while loop' & 'for loop'
+1. WHILE LOOP :-
+   syntax - 
+
+   initialization
+   while condition : 
+     statement
+     increament/decreament
+
+break & continue :-
+
+- break: break is used to terminate the loop encountered.
+- continue: terminates execution in the current iteration $ continue execution of the loop 
+with the iteration.
+
+
+FOR LOOP :->
+
+- For loop are use for sequential transversal . for traversing list , string , tuple etc . 
+- syntax ->
+
+   for value in list:
+   statement..
+
+
+RANGE() :->
+
+- range function returns a sequence of numbers , starting from 0 by default , and increaments by 1 (by default) , and stops before a specified number .
+
+- syntax ->
+range(start , stop , step)
+
+
+FUNCTIONS IN PYTHON :->
+
+- Functions is a block of statements that performs a specific task .
+- syntax :-
+def func_name(parameter1 , parameter2 ...):
+returns val
+
+func_name(arg1 , arg2) #function call
+
+
+- functions are of 2 types in python
+1. buld-in function - print(), len(), type(), range() ... etc
+2. user defined function - user can develop the function.
+
+OOPS in python (OBJECT ORIENTED PROGRAMMING):->
+
+- to map with real world scenarios , we started using objects in code . this is called object oriented programming .
+
+1st concept -> procedual programming.
+2nd concept -> functional programming.
+3rd concept -> object oriented programming. 
+
+CLASS & OBJECT IN PYTHON :->
+
+- class is a blueprint of creating objects .
+
+ex -> creating a class - 
+class Student:
+name = "web bocket"
+
+ex -> creating an object(instance)
+s1 = student()
+print(s1.name) #web bocket
+
+
+__init__ function (constructor) :->
+
+- All class have a function called __init__() , which is always executed when the class is being initiated.
+
+ex.-> creating a class 
+class student:
+def __init__(self , fullname):
+self.name = fullname
+
+ex.-> creating a object
+s1 = student("webbocket")
+print(s1.name)
+
+note :-> The self parameter is the reference to the current instance of the class ,  and is used to access variable that belongs to the class .
+
+
+CLASS & INSTANCE ATTRUBURES :->
+
+university -> college1 , college2 , college3 , college4
+              student1 , student2 , student3 , student4
+
+- colleges and students are the attributes of university.
+
+METHODS IN PYTHON :->
+
+- methods are the function that belongs to objects.
+
+ex, -> creating a class 
+
+class student:
+   def __init__ (self , fullname):
+       self.name = fullname 
+   def heello(self):
+   print("hello" , self.name)
+
+
+ex. -> creating object
+
+s1 = student("rohan")
+s1.hello()
+/
+/
+/
+/
+/
+
+
+private(like) Attributes & Methods :->
+
+- private attributes and methods are meant to be used only within the class and are not accessible from outside the class .
+- the private class attributes are written in __(attributes) so that we call it private attributes of a class.
+
+
+
+INHERITANCE :->
+
+- when one class(child class) derives the properties & methods of another class(parent class).
+
+- syntax - 
+class Car:
+----------
+class Toyotacar(car):
+----------
+
+- in python inheritance are of 3 types :
+1. single inheritance 
+2. multi-level inheritance 
+3. multiple inheritance 
+
+
+-------- geeksforgeeks --------
+
+
+POLYMORPHISM :-> OPERATOR OVERLOADING :->
+- when the same operator is allowed to have different meaning meaning accordingly to the context.
+- in that polymorphism we can use duner functions.
+
+1. a + b -> __add__
+2. a - b -> __sub__
+3. a * b -> __mul__
+4. a / b -> __truediv__
+5. a % b -> __mod__
+
+ex - (+)
+
+print(1 + 2) #3 (addition)
+print("web" + "bocket") #web bocket (concatination)
+print([1,2,3] + [4,5,6]) #[1,2,3,4,5,6] (merged)
 
 
 
